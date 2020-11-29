@@ -1,0 +1,5 @@
+{
+    "socket-server" : "http://localhost:4000",
+    "pub-sub-port" : 4000,
+    "tracking-service-port" : 3002
+}

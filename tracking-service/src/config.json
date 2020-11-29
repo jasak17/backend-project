@@ -1,0 +1,4 @@
+{
+    "socket-server" : "http://localhost:4000",
+    "tracking-service-port" : 3002
+}
