@@ -11,25 +11,25 @@ This is visual presentation of our system. We have two seperate services (tracki
 - **mongodb** with mongoose
 - **socket.io** was used to create pub/sub system 
 
-## Requirements
+## Requirements:
 - npm
 - mongodb
 
-## Used ports
+## Used ports:
 - 3000 - tracking-service
 - 4000 - pub-sub-system
 
 ## Setup
 1. For the best presentation of how our system works open three different terminals in the root directory of our project.
 
-2. In the first terminal run
+2. In the first terminal run:
 - cd tracking-service
 - npm run create-db
 - npm run build-start
-3. In the second terminal run
+3. In the second terminal run:
 - cd pub-sub-system
 - npm run build-start
-4. In the third terminal run
+4. In the third terminal run:
 - cd cli-client
 - npm install
 - node client.js 1 2 
@@ -39,7 +39,7 @@ This is visual presentation of our system. We have two seperate services (tracki
 7. You can open new clients from cli-client folder with  `node client.js 1 2 3` this for example would create new client who is subscribed to ids 1,2 and 3
 8. Don't forget to drop database. In tracking-service run `npm run drop-db`
 
-## Tests
-In tracking-service run
+## Tests:
+In tracking-service run:
 - npm run build
 - npm run tests
