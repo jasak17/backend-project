@@ -6,7 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "devStart": "nodemon ./src/app.ts",
     "start": "node ./build/app.js",
-    "build": "tsc"
+    "build-start": "npm install && node ./src/databaseSetup/createDb.js && tsc && node ./build/app.js",
+    "drop-db": "node ./src/databaseSetup/dropDb.js",
+    "create-db": "node ./src/databaseSetup/createDb.js"
   },
   "keywords": [],
   "author": "",

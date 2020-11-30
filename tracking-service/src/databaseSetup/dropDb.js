@@ -6,7 +6,7 @@ function dropStoreDatabase() {
 
     MongoClient.connect(url, (err, db) => {
         if (err) throw err;
-        let dbo = db.db("celtraProject");
+        let dbo = db.db("celtra");
         dbo.dropDatabase((err, delOK) => {
             if (err) throw err;
             if (delOK) console.log("Database " + dbo.s.databaseName + " deleted");

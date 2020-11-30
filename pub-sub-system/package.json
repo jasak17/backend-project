@@ -4,10 +4,11 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "devStart": "nodemon ./app.ts",
+    "devStart": "nodemon ./src/app.ts",
     "start": "node ./build/app.js",
     "build": "tsc",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "build-start": "npm install && tsc && node ./build/app.js"
   },
   "keywords": [],
   "author": "",

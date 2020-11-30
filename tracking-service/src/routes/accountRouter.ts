@@ -25,14 +25,17 @@ router.get('/:id', async (req: Request, res: Response) => {
                 data: String(req.query.data),
                 timestamp: String(new Date())
             }
-            socket.emit('pub-sub-service', JSON.stringify(message));
-            res.json(message)
+            socket.emit('pub-sub-service', JSON.stringify(message))
+            console.log(JSON.stringify(message))
+            res.status(200).json(message)
         }
         else {
-            res.send('inactive account or no data ')
+            res.json('inactive account or no data ')
+            console.log('inactive account or no data ')
         }
     } catch (err) {
-        res.send(err)
+        res.status(400).json(err)
+        console.log('bad request')
     }
 });
 

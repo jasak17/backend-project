@@ -12,7 +12,6 @@ const io = new Server(httpServer);
  * named by the id of account.
  */
 io.on('connection', (socket) => {
-
   socket.on('pub-sub-service', function (message: string) {
     console.log(`pub-sub-service received: '${message}'`)
     io.emit(String(JSON.parse(message).id), message);
@@ -20,4 +19,4 @@ io.on('connection', (socket) => {
 
 });
 
-httpServer.listen(port);
+httpServer.listen(port, () => {console.log(`pub-sub-service listening on: ${port}`)});
