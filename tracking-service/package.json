@@ -6,16 +6,21 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "devStart": "nodemon ./src/app.ts",
     "start": "node ./build/app.js",
-    "build-start": "npm install && node ./src/databaseSetup/createDb.js && tsc && node ./build/app.js",
+    "build": "tsc",
+    "build-start": "npm install && tsc && node ./build/app.js",
     "drop-db": "node ./src/databaseSetup/dropDb.js",
-    "create-db": "node ./src/databaseSetup/createDb.js"
+    "create-db": "node ./src/databaseSetup/createDb.js",
+    "tests": "mocha ./src/test/account.spec.js --timeout 10000"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/mocha": "^8.0.4",
     "@types/mongoose": "^5.10.1",
     "@types/socket.io-client": "^1.4.34",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "express": "^4.17.1",
     "mongodb": "^3.6.3",
     "mongoose": "^5.10.17",

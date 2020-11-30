@@ -18,3 +18,5 @@ db.once('open', () => console.log('connected to the database'));
 app.use('/api/account', router);
 
 app.listen(port, () => console.log(`LISTENING ON PORT ${port}`));
+
+module.exports = app

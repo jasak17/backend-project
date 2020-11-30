@@ -24,6 +24,7 @@ This is visual presentation of our system. We have two seperate services (tracki
 
 2. In the first terminal run
 - cd tracking-service
+- npm run create-db
 - npm run build-start
 3. In the second terminal run
 - cd pub-sub-system
@@ -33,8 +34,12 @@ This is visual presentation of our system. We have two seperate services (tracki
 - npm install
 - node client.js 1 2 
 
-
 5. Now you can send http request. For example: http://localhost:3000/api/account/1?data="test"
 6. If account with id 1 is active, then tracking-service will send message to pub-sub-system which will forward it to all subscribers.
 7. You can open new clients from cli-client folder with  `node client.js 1 2 3` this for example would create new client who is subscribed to ids 1,2 and 3
 8. Don't forget to drop database. In tracking-service run `npm run drop-db`
+
+## Tests
+In tracking-service run
+- npm run build
+- npm run tests
