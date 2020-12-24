@@ -1,5 +1,4 @@
 # Celtra backend assignment
-Jaša Kšela ksela.jasa@gmail.com
 
 <img src="architecture.PNG" width="600">
 
